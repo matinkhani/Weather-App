@@ -1,0 +1,550 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main Space */
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The Weather Space */
+.weather_container {
+  background-position: center center;
+  background-size: cover;
+  height: 77%;
+  width: 65%;
+  border-radius: 32px;
+  position: relative;
+}
+
+/* Input & Button Container */
+.input_btn_container {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  /* background-color: rebeccapurple; */
+}
+
+.input_btn_container input {
+  outline: none;
+  border: none;
+  height: 50%;
+  width: 30%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.input_btn_container button {
+  border: none;
+  height: 50%;
+  width: 10%;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Refresh Icon */
+.refresh_icon {
+  position: absolute;
+  top: 3%;
+  right: 2.5%;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* City & Country Name Container */
+.city_country_container {
+  height: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  /* background-color: blue; */
+}
+
+.city_country_container p {
+  /* color: #fff; */
+  font-size: 25px;
+}
+
+/* Icon Container */
+.icon_container {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: white; */
+}
+
+/* Text Container */
+.text_container {
+  height: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  /* color: #fff; */
+  /* background-color: orange; */
+}
+
+/* Temp Container */
+.temp_container {
+  height: 20%;
+  /* background-color: maroon; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp_container p {
+  font-size: 60px;
+  /* color: #fff; */
+}
+
+/* Local Time Container */
+.local_time_container {
+  height: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.local_time_container p {
+  font-size: 25px;
+  /* color: #fff; */
+}
+
+/* Feels Like Container */
+.feels_like_container {
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aquamarine; */
+}
+
+.feels_like_container p {
+  font-size: 20px;
+  background-color: rgba(213, 213, 213, 0.609);
+  border-radius: 20px;
+  padding-inline: 10px;
+  padding-block: 4px;
+  /* color: #fff; */
+}
+
+/* Humidity Container */
+.humidity_container {
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: brown; */
+}
+
+.humidity_container p {
+  font-size: 20px;
+  background-color: rgba(213, 213, 213, 0.609);
+  border-radius: 20px;
+  padding-inline: 10px;
+  padding-block: 4px;
+  /* color: #fff; */
+}
+
+/* UV Container */
+.uv_container {
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: chartreuse; */
+}
+
+.uv_container p {
+  font-size: 20px;
+  background-color: rgba(213, 213, 213, 0.609);
+  border-radius: 20px;
+  padding-inline: 10px;
+  padding-block: 4px;
+  /* color: #fff; */
+}
+
+/* Wind Mile Per Hour Container */
+.wind_mph_container {
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: darkblue; */
+}
+
+.wind_mph_container p {
+  font-size: 20px;
+  background-color: rgba(213, 213, 213, 0.609);
+  border-radius: 20px;
+  padding-inline: 10px;
+  padding-block: 4px;
+  /* color: #fff; */
+}
+
+/* Loading Spinner */
+.loader {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+}
+
+.loader div {
+  width: 8%;
+  height: 24%;
+  background: rgb(128, 128, 128);
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  opacity: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  animation: fade458 1s linear infinite;
+}
+
+@keyframes fade458 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.25;
+  }
+}
+
+.loader .bar1 {
+  transform: rotate(0deg) translate(0, -130%);
+  animation-delay: 0s;
+}
+
+.loader .bar2 {
+  transform: rotate(30deg) translate(0, -130%);
+  animation-delay: -1.1s;
+}
+
+.loader .bar3 {
+  transform: rotate(60deg) translate(0, -130%);
+  animation-delay: -1s;
+}
+
+.loader .bar4 {
+  transform: rotate(90deg) translate(0, -130%);
+  animation-delay: -0.9s;
+}
+
+.loader .bar5 {
+  transform: rotate(120deg) translate(0, -130%);
+  animation-delay: -0.8s;
+}
+
+.loader .bar6 {
+  transform: rotate(150deg) translate(0, -130%);
+  animation-delay: -0.7s;
+}
+
+.loader .bar7 {
+  transform: rotate(180deg) translate(0, -130%);
+  animation-delay: -0.6s;
+}
+
+.loader .bar8 {
+  transform: rotate(210deg) translate(0, -130%);
+  animation-delay: -0.5s;
+}
+
+.loader .bar9 {
+  transform: rotate(240deg) translate(0, -130%);
+  animation-delay: -0.4s;
+}
+
+.loader .bar10 {
+  transform: rotate(270deg) translate(0, -130%);
+  animation-delay: -0.3s;
+}
+
+.loader .bar11 {
+  transform: rotate(300deg) translate(0, -130%);
+  animation-delay: -0.2s;
+}
+
+.loader .bar12 {
+  transform: rotate(330deg) translate(0, -130%);
+  animation-delay: -0.1s;
+}
+
+.spinner {
+  font-size: 28px;
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+.spinner.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.spinner .spinner-blade {
+  position: absolute;
+  left: 0.4629em;
+  bottom: 0;
+  width: 0.074em;
+  height: 0.2777em;
+  border-radius: 0.0555em;
+  background-color: transparent;
+  -webkit-transform-origin: center -0.2222em;
+  -ms-transform-origin: center -0.2222em;
+  transform-origin: center -0.2222em;
+  animation: spinner-fade9234 1s infinite linear;
+}
+
+.spinner .spinner-blade:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.spinner .spinner-blade:nth-child(2) {
+  -webkit-animation-delay: 0.083s;
+  animation-delay: 0.083s;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.spinner .spinner-blade:nth-child(3) {
+  -webkit-animation-delay: 0.166s;
+  animation-delay: 0.166s;
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.spinner .spinner-blade:nth-child(4) {
+  -webkit-animation-delay: 0.249s;
+  animation-delay: 0.249s;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.spinner .spinner-blade:nth-child(5) {
+  -webkit-animation-delay: 0.332s;
+  animation-delay: 0.332s;
+  -webkit-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
+.spinner .spinner-blade:nth-child(6) {
+  -webkit-animation-delay: 0.415s;
+  animation-delay: 0.415s;
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.spinner .spinner-blade:nth-child(7) {
+  -webkit-animation-delay: 0.498s;
+  animation-delay: 0.498s;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.spinner .spinner-blade:nth-child(8) {
+  -webkit-animation-delay: 0.581s;
+  animation-delay: 0.581s;
+  -webkit-transform: rotate(210deg);
+  -ms-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+
+.spinner .spinner-blade:nth-child(9) {
+  -webkit-animation-delay: 0.664s;
+  animation-delay: 0.664s;
+  -webkit-transform: rotate(240deg);
+  -ms-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+
+.spinner .spinner-blade:nth-child(10) {
+  -webkit-animation-delay: 0.747s;
+  animation-delay: 0.747s;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.spinner .spinner-blade:nth-child(11) {
+  -webkit-animation-delay: 0.83s;
+  animation-delay: 0.83s;
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.spinner .spinner-blade:nth-child(12) {
+  -webkit-animation-delay: 0.913s;
+  animation-delay: 0.913s;
+  -webkit-transform: rotate(330deg);
+  -ms-transform: rotate(330deg);
+  transform: rotate(330deg);
+}
+
+@keyframes spinner-fade9234 {
+  0% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Responsive */
+@media screen and (min-width: 360px) and (max-width: 413px) {
+  .weather_container {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  .city_country_container {
+    margin-top: 2%
+  }
+  .input_btn_container input {
+    width: 70%;
+  }
+  .text_container {
+    font-size: 35px;
+  }
+  .input_btn_container button {
+    width: 20%;
+  }
+  .refresh_icon {
+    right: 1%;
+    top: 2%;
+  }
+  .icon_container img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 413px) and (max-width: 821px) {
+  .weather_container {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  .input_btn_container input {
+    width: 70%;
+    font-size: 30px;
+  }
+  .input_btn_container button {
+    width: 20%;
+  }
+  .refresh_icon {
+    right: 5%;
+  }
+  .city_country_container p {
+    font-size: 50px;
+  }
+  .icon_container img {
+    height: 200px;
+    width: 200px;
+  }
+  .text_container {
+    font-size: 50px;
+  }
+  .temp_container p {
+    font-size: 100px;
+  }
+  .local_time_container p {
+    font-size: 50px;
+  }
+  .feels_like_container p {
+    font-size: 40px;
+  }
+  .humidity_container p {
+    font-size: 40px;
+  }
+  .uv_container p {
+    font-size: 40px;
+  }
+  .wind_mph_container p {
+    font-size: 40px;
+  }
+}
+
+
+@media screen and (min-width: 821px) and (max-width: 913px) {
+  .weather_container {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  .input_btn_container input {
+    width: 70%;
+    font-size: 30px;
+  }
+  .input_btn_container button {
+    width: 20%;
+  }
+  .refresh_icon {
+    right: 5%;
+  }
+  .city_country_container p {
+    font-size: 50px;
+  }
+  .icon_container img {
+    height: 200px;
+    width: 200px;
+  }
+  .text_container {
+    font-size: 50px;
+  }
+  .temp_container p {
+    font-size: 100px;
+  }
+  .local_time_container p {
+    font-size: 50px;
+  }
+  .feels_like_container p {
+    font-size: 40px;
+  }
+  .humidity_container p {
+    font-size: 40px;
+  }
+  .uv_container p {
+    font-size: 40px;
+  }
+  .wind_mph_container p {
+    font-size: 40px;
+  }
+}
