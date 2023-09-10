@@ -12,12 +12,13 @@ export default function Weather() {
   async function getApi() {
     setLoading(true);
     await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=fe3cfef9b68543d1b2e133508231108&q=${input}&aqi=no`
+      `http://api.weatherapi.com/v1/current.json?key=f31ede78349f4189bf3140334231009&q=${input}&aqi=no`
     )
       .then(async (res) => {
         if (res.ok) {
           let data = await res.json();
           setApi(data);
+          console.log(data);
         } else {
           alert("Please Enter a Correct City Name");
           setInput("");
