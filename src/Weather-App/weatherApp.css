@@ -428,14 +428,14 @@
 }
 
 /* Responsive */
-@media screen and (min-width: 360px) and (max-width: 413px) {
+@media screen and (min-width: 0px) and (max-width: 700px) {
   .weather_container {
     height: 100%;
     width: 100%;
     border-radius: 0;
   }
   .city_country_container {
-    margin-top: 2%
+    margin-top: 2%;
   }
   .input_btn_container input {
     width: 70%;
@@ -453,98 +453,5 @@
   .icon_container img {
     height: 100px;
     width: 100px;
-  }
-}
-
-@media screen and (min-width: 413px) and (max-width: 821px) {
-  .weather_container {
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
-  }
-  .input_btn_container input {
-    width: 70%;
-    font-size: 30px;
-  }
-  .input_btn_container button {
-    width: 20%;
-  }
-  .refresh_icon {
-    right: 5%;
-  }
-  .city_country_container p {
-    font-size: 50px;
-  }
-  .icon_container img {
-    height: 200px;
-    width: 200px;
-  }
-  .text_container {
-    font-size: 50px;
-  }
-  .temp_container p {
-    font-size: 100px;
-  }
-  .local_time_container p {
-    font-size: 50px;
-  }
-  .feels_like_container p {
-    font-size: 40px;
-  }
-  .humidity_container p {
-    font-size: 40px;
-  }
-  .uv_container p {
-    font-size: 40px;
-  }
-  .wind_mph_container p {
-    font-size: 40px;
-  }
-}
-
-
-@media screen and (min-width: 821px) and (max-width: 913px) {
-  .weather_container {
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
-  }
-  .input_btn_container input {
-    width: 70%;
-    font-size: 30px;
-  }
-  .input_btn_container button {
-    width: 20%;
-  }
-  .refresh_icon {
-    right: 5%;
-  }
-  .city_country_container p {
-    font-size: 50px;
-  }
-  .icon_container img {
-    height: 200px;
-    width: 200px;
-  }
-  .text_container {
-    font-size: 50px;
-  }
-  .temp_container p {
-    font-size: 100px;
-  }
-  .local_time_container p {
-    font-size: 50px;
-  }
-  .feels_like_container p {
-    font-size: 40px;
-  }
-  .humidity_container p {
-    font-size: 40px;
-  }
-  .uv_container p {
-    font-size: 40px;
-  }
-  .wind_mph_container p {
-    font-size: 40px;
   }
 }
