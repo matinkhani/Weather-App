@@ -8,7 +8,7 @@ export default function Weather() {
   const [api, setApi] = useState<any | undefined>();
   const [loading, setLoading] = useState<boolean>(false);
   const [background, setBackground] = useState<string>("");
-  
+
   async function getApi() {
     setLoading(true);
     await fetch(
